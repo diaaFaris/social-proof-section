@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+/* Start Variables */
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+
+    --fs-700: 2.5rem;
+
+    --radius: 0.5rem;
+}
+
+/* End Variables */
+
+/* Start general Styles */
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1320px;
+    }
+}
+
+/* End General Styles */
+
+/* Start Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4.5em;
+    padding-bottom: 4.5em;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info .heading {
+    text-align: center;
+}
+
+.info .heading h1 {
+    color: var(--very-dark-magenta);
+    font-size: var(--fs-700);
+    line-height: 1;
+    margin: 0 auto 0.8em;
+    max-width: 14ch;
+}
+
+.info .heading p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: var(--dark-grayish-magenta);
+    margin-bottom: 2em;
+}
+
+.info .rating {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-bottom: 4em;
+}
+
+.info .rating .card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-grayish-magenta);
+    padding: 1.5em;
+    gap: 0.8em;
+    border-radius: var(--radius);
+}
+
+.info .rating .card .stars {
+    display: flex;
+    gap: 0.5em;
+}
+
+.info .rating .card h2 {
+    color: var(--very-dark-magenta);
+    font-size: 1.2rem;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.testimonials .card {
+    background: var(--very-dark-magenta);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius);
+    padding: 1.7em;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.testimonials .card header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1.5em;
+}
+
+.testimonials .card header img {
+    width: 3em;
+    border-radius: 50%;
+}
+
+.testimonials .card header .user {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials .card header .user .name {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.testimonials .card header .user .isVerified {
+    font-size: 1.2rem;
+    color: var(--soft-pink);
+}
+
+@media (min-width: 768px) {
+    :root {
+        --fs-700: 3.5rem;
+    }
+
+    main {
+        gap: 3em;
+        padding-bottom: 10em;
+    }
+
+    .info {
+        flex-direction: row;
+        gap: 5em;
+    }
+
+    .info .heading {
+        width: 50%;
+        text-align: left;
+    }
+
+    .info .heading h1 {
+        margin: 0 0 0.5em;
+    }
+
+    .info .rating {
+        flex: 1;
+    }
+
+    .info .rating .card {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .info .rating .card:nth-child(2) {
+        transform: translateX(2em);
+    }
+
+    .info .rating .card:last-child {
+        transform: translateX(4em);
+    }
+
+    .testimonials {
+        flex-direction: revert;
+    }
+
+    .testimonials .card:nth-child(2) {
+        transform: translateY(2em);
+    }
+
+    .testimonials .card:last-child {
+        transform: translateY(4em);
+    }
+}
+
+@media (max-width: 992px) {
+    .info .rating .card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* End Main */
