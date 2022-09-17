@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
+- Solution URL: [https://diaafaris.github.io/social-proof-section/](https://diaafaris.github.io/social-proof-section/)
 
 ## My process
 
